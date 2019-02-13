@@ -52,5 +52,4 @@ Reflecting on Principle
 2. What does Martin's SOLID acronym stand for? (Just expand the acronym.)
 3. True or False: It is our professional responsibility to always spend time designing before writing our code (designing now rather than later).
 4. In Metz' TRUE acronym, what does the E stand for and what does it mean?
-5. How does applying SRP naturally lead to good design?
-=end
+5. How does apply
