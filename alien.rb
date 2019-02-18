@@ -23,14 +23,16 @@ class Alien
     "👾 (#{x}, #{y})"
   end
 
-  def fire(missiles)
-    missile = Missile.new(x, bottom_edge)
-    missile.launch(10)
-    missiles.add(missile)
+  def ordanance_velocity
+    10
   end
 
   def bottom_edge
     y + HEIGHT / 2
+  end
+
+  def muzzle_location
+    Vector.new(x, top_edge)
   end
 
 end

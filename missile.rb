@@ -1,18 +1,18 @@
 class Missile
 
-  attr_accessor :x, :y, :velocity
+  attr_accessor :muzzle_location, :y, :velocity
 
-  def initialize(x, y)
-    @x = x
-    @y = y
+  def initialize(muzzle_location,velocity)
+    @location = :muzzle_location
+    @velocity = :velocity
   end
 
-  def launch(velocity)
-    @velocity = velocity
-  end
+  # def launch(velocity)
+  #   @velocity = velocity
+  # end
 
   def move
-    self.y += velocity
+    self.location.y += velocity
   end
 
   def draw

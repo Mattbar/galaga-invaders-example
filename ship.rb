@@ -6,17 +6,16 @@ class Ship
   HEIGHT = 100
   DEFAULT_VELOCITY = 5
 
-  attr_accessor :x, :y
+  attr_accessor :x, :y, :muzzle_location
 
   def initialize(screen_width, screen_height)
     @x = screen_width / 2
     @y = screen_height - half_height
   end
+  
 
-  def fire(missiles)
-    missile = Missile.new(x, top_edge)
-    missile.launch(-10)
-    missiles.add(missile)
+  def ordanance_velocity
+    -10
   end
 
   def move_left
@@ -35,15 +34,16 @@ class Ship
     "✈️ (#{x}, #{y})"
   end
 
+  def muzzle_location
+    Vector.new(x, top_edge)
+  end
+
   private
 
   def move(delta)
     self.x += delta
   end
 
-  def muzzle_location
-    Vector.new(x, top_edge)
-  end
 
   def top_edge
     y - half_height

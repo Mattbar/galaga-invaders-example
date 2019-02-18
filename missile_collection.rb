@@ -18,4 +18,8 @@ class MissileCollection
     missiles.each(&:draw)
   end
 
+  def fire(vessel)
+   add(Missile.new(vessel.muzzle_location, vessel.ordanance_velocity)) 
+  end
+
 end
