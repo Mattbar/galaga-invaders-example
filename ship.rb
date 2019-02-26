@@ -33,6 +33,10 @@ class Ship
     "✈️ (#{location})"
   end
 
+  def missile_velocity
+    -10
+  end
+
   private
 
   def move(delta)
