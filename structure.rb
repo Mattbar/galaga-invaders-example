@@ -1,4 +1,4 @@
-class Structure
+module Structure
 
   DAMAGE = 1
 

@@ -1,12 +1,14 @@
 class Missile < Structure
 
+  include Draw
+
   def initialize(args)
     super
     @sprite = args.fetch[:sprite]
   end
 
-  def draw
+  draw(sprite)
     # Draws the `sprite` at `location`
-  end
+  
 
 end
